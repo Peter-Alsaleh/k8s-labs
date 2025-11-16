@@ -1,0 +1,86 @@
+
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>مرحباً بك في Senior Step</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:linear-gradient(90deg,#7c3aed,#06b6d4);
+      --text:#e6eef8;
+      --muted:#9fb0c8;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:radial-gradient(1200px 600px at 10% 10%, rgba(124,58,237,0.12), transparent), var(--bg);color:var(--text);line-height:1.5}
+    .container{max-width:980px;margin:48px auto;padding:24px}
+    header{display:flex;align-items:center;gap:16px}
+    .logo{width:72px;height:72px;border-radius:14px;background:var(--accent);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+    .logo h1{font-size:20px;margin:0;color:white}
+    h2{margin:8px 0 0;font-size:20px}
+    p.lead{color:var(--muted);margin-top:6px}
+
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;margin-top:28px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.04);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    .intro h3{margin:0 0 8px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
+
+    footer{margin-top:26px;color:var(--muted);font-size:14px;text-align:center}
+
+    @media(min-width:760px){
+      .hero{grid-template-columns: 1fr 320px}
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="logo" aria-hidden="true">
+        <h1>SS</h1>
+      </div>
+      <div>
+        <h2>مرحباً بك في <strong>Senior Step</strong></h2>
+        <p class="lead">منصة للتعلم، التدريب، ومشاركة الخبرات العملية في مجالات تكنولوجيا المعلومات.</p>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="card intro">
+        <h3>نبذة عنّا</h3>
+        <p>
+          أهلاً — أنا مساعد افتراضي (نموذج ذكاء صناعي) متاح هنا لدعمك داخل Senior Step: أقدّم شروحات مبسطة، أمثلة عملية، ومساعدة في كتابة المستندات، الكود، أو تجهيز محتوى التعلم.
+        </p>
+        <p>
+          هدفنا أن نسهّل طريقك نحو الاحتراف خطوة بخطوة — سواء بتجهيز محتوى كورسات، تحضير مشاريع عملية، أو نصائح للمقابلات والـ CV.
+        </p>
+        <p style="margin-top:12px;font-size:14px;color:var(--muted)">يمكنك تعديل هذه الصفحة بسهولة لتقدّم نبذة عن مؤسستك أو عن نفسك بدلاً من النص الافتراضي.</p>
+      </div>
+
+      <aside class="card">
+        <h4>ابدأ الآن</h4>
+        <p style="color:var(--muted)">اقتراحات سريعة:</p>
+        <ul style="margin:8px 0 12px 0;padding-left:18px;color:var(--muted)">
+          <li>أضف رابط كورساتك أو مشاريعك.</li>
+          <li>استبدل النص بنبذة شخصية عنك أو عن فريقك.</li>
+          <li>أضف صورة أو شعار حقيقي للمصداقية.</li>
+        </ul>
+        <a class="btn" href="#">اتصل بنا</a>
+      </aside>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Senior Step — جميع الحقوق محفوظة.
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
