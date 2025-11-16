@@ -9,7 +9,8 @@ spec:
   selector:
     matchLabels:
       app: nginx
-  strategy: {}
+  strategy: 
+   type: Recreate
   template:
     metadata:
       labels:
