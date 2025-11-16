@@ -9,7 +9,8 @@ spec:
   selector:
     matchLabels:
       app: flask-app
-  strategy: {}
+  strategy:
+    type: RollingUpdate
   template:
     metadata:
       labels:
