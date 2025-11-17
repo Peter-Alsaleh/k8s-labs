@@ -1,0 +1,9 @@
+apiVersion: v1
+data:
+  MYSQL_PASSWORD: "123"
+  MYSQL_ROOT_PASSWORD: "123456"
+  MYSQL_USER: peroh
+kind: ConfigMap
+metadata:
+  name: mysql-config
+
