@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: mysql-deployment
+  name: mysql-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mysql-deployment
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: mysql-deployment
+    spec:
+      containers:
+      - image: mysql
+        name: mysql
+        envFrom:
+         - secretRef:
+            name: mysql-secret
+         - configMapRef:
+            name: mysql-config
+
+        resources: {}
+status: {}
+
